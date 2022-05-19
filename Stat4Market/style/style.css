@@ -41,6 +41,7 @@
         background-repeat: no-repeat;
         background-position: top;
         background-position-x: left;
+        margin: auto;
     }
     
     .container {
@@ -102,6 +103,7 @@
     
     .nav__logo {
         display: flex;
+        align-items: center;
     }
     
     .nav-logo__img {
@@ -141,7 +143,7 @@
     }
     
     .nav__item {
-        margin-right: 40px;
+        margin-right: 30px;
     }
     
     .nav__item :not(:last-child) {
@@ -284,6 +286,7 @@
     
     .main {
         position: relative;
+        overflow-x: hidden;
     }
     
     .main__title {
@@ -543,7 +546,7 @@
             width: 410px;
             height: 410px;
             top: 35%;
-            left: 62%;
+            left: 67%;
         }
         .main__right::before {
             background-image: none;
@@ -551,7 +554,7 @@
         .history__title,
         .education__title,
         .education__text {
-            max-width: 100%;
+            max-width: 90%;
         }
         .history-card__img {
             width: 270px;
@@ -573,13 +576,13 @@
         }
     }
     
-    @media(max-width:800px) {
+    @media(max-width:850px) {
         .container {
-            max-width: 700px;
+            max-width: 750px;
         }
         .nav-logo__img {
             width: 140px;
-            height: 30px;
+            height: 40px;
             background-position: -10px -212px;
         }
         .history {
@@ -594,7 +597,7 @@
         }
     }
     
-    @media(max-width:630px) {
+    @media(max-width:530px) {
          :root {
             --size-h2: 26px;
             --size-h3: 24px;
@@ -602,11 +605,12 @@
             --size-textSmall: 16px;
         }
         .container {
-            max-width: 330px;
+            min-width: 330px;
+            padding: 0px 10px;
         }
         .nav-logo__img {
             width: 140px;
-            height: 30px;
+            height: 32px;
             background-position: -10px -212px;
         }
         .nav-logo__text {
@@ -620,14 +624,14 @@
         }
         .main__title {
             width: 60%;
-            line-height: 35px;
+            line-height: 42px;
         }
         .main__left {
             width: 100%;
         }
         .main__right {
             background-image: url(../img/исходники/500/Superman500.svg);
-            top: -5%;
+            top: 0%;
         }
         .history-card__text {
             max-width: 100%;
