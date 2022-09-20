@@ -1,0 +1,43 @@
+@media (max-width: 1300px) {
+    .course__card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .obratnuj-zvonok {
+        left: 35%;
+    }
+    .about__block {
+        flex-direction: column-reverse;
+        align-content: space-around;
+    }
+    .rate__block {
+        justify-content: center;
+    }
+    .rate__card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .course__block {
+        justify-content: center;
+    }
+    .header__title {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 600px) {
+    .obratnuj-zvonok {
+        left: 5%;
+    }
+    .btn__zvonok {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .header__title {
+        font-size: 48px;
+    }
+}

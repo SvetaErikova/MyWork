@@ -1,0 +1,648 @@
+    @font-face {
+        font-family: "LatoBold";
+        font-style: Bold;
+        font-weight: 700;
+        src: url(../font/lato-bold-webfont.woff);
+        src: url(../font/lato-bold-webfont.woff2);
+        src: url(../font/Lato-Bold.ttf);
+    }
+    
+    @font-face {
+        font-family: "LatoSemibold";
+        font-style: bold;
+        src: url(../font/lato-semibold-webfont.woff);
+        src: url(../font/lato-semibold-webfont.woff2);
+        src: url(../font/Lato-Semibold.ttf);
+    }
+    
+    @font-face {
+        font-family: "LatoRegular";
+        src: url(../font/lato-regular-webfont.woff);
+        src: url(../font/lato-regular-webfont.woff2);
+        src: url(../font/Lato-Regular.ttf);
+    }
+    
+     :root {
+        --color-pink: #CF51CE;
+        --color-black: #331A2F;
+        --opacity-grey: 80%;
+        --size-h2: 56px;
+        --size-h3: 48px;
+        --size-text: 24px;
+        --size-textSmall: 18px;
+        --size-logoText: 14px
+    }
+    
+    .body {
+        font-family: "LatoRegular";
+        font-size: var(--size-text);
+        color: var(--color-black);
+        background-image: url(../img/background-left.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-position-x: left;
+        margin: auto;
+    }
+    
+    .container {
+        padding: 0px 50px;
+        max-width: 1530px;
+        margin: 0px auto;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    a {
+        cursor: pointer;
+        color: var(--color-black);
+        text-decoration: none;
+        transition-property: background, color, text-decoration;
+        transition-duration: 0.5s;
+    }
+    
+    a:hover {
+        color: var(--color-pink);
+        text-decoration: underline 0.5px;
+    }
+    
+    ul {
+        padding-left: 0px;
+    }
+    
+    .pink {
+        color: var(--color-pink);
+    }
+    
+    .main,
+    .history {
+        margin-bottom: 150px;
+    }
+    /* header*/
+    
+    .header__title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 65px;
+    }
+    
+    .nav__logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-logo__img {
+        display: inline-block;
+        margin-right: 20px;
+        width: 241px;
+        height: 58px;
+        background-image: url(../img/logo-sprite.png);
+        background-position: -10px -10px;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .nav-logo__link::before {
+        content: " ";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nav-logo__text {
+        display: inline-block;
+        max-width: 200px;
+        font-size: var(--size-logoText);
+        padding: 10px 0px 10px 10px;
+        border-left: solid 1px rgba(51, 26, 47, 0.5);
+    }
+    
+    .nav__list {
+        display: flex;
+        justify-content: space-around;
+        min-width: 20%;
+    }
+    
+    .nav__item {
+        margin-right: 30px;
+    }
+    
+    .nav__item :not(:last-child) {
+        margin-right: 0px;
+    }
+    
+    .nav__analitics {
+        padding-right: 20px;
+        background-image: url(../img/исходники/arrow-list.svg);
+        background-position: center right;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .nav__analitics::before {
+        content: " ";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nav__phone {
+        padding-left: 30px;
+        background-image: url(../img/исходники/phone.svg);
+        background-repeat: no-repeat;
+        background-position: center left;
+        position: relative;
+    }
+    
+    .nav__phone-link::before {
+        content: " ";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nav__btn {
+        font-size: var(--size-text);
+        color: white;
+        padding: 5px 30px 5px 60px;
+        background-color: var(--color-pink);
+        border-radius: 15px;
+        border: none;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        background-image: url(../img/исходники/1920/arrow1920.svg);
+        background-repeat: no-repeat;
+        background-position: 25px;
+    }
+    
+    .nav__btn:hover {
+        opacity: 80%
+    }
+    
+    .nav__burger {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .nav-burger__btn {
+        position: relative;
+        border: none;
+        padding: 0;
+        width: 40px;
+        height: 30px;
+        color: var(--color-pink);
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .nav-burger__btn::before,
+    .nav-burger__btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 4px;
+        background-color: currentColor;
+        border-radius: 4px;
+    }
+    
+    .nav-burger__btn::before {
+        top: 0;
+        width: 100%;
+    }
+    
+    .nav-burger__btn::after {
+        top: calc(100% - 2px);
+        width: 80%;
+        left: 7px;
+    }
+    
+    .nav-burger__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background-color: currentColor;
+        border-radius: 4px;
+    }
+    /* breadcrumb */
+    
+    .breadcrumb {
+        font-size: 16px;
+        opacity: 50%;
+        margin: 0px;
+    }
+    
+    .breadcrumb-item {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .breadcrumb-item__title {
+        margin: 0px;
+    }
+    
+    .breadcrumb__item:not(:last-child) {
+        margin-right: 25px;
+    }
+    
+    .breadcrumb__item::before {
+        content: " — ";
+        position: absolute;
+        left: -20px;
+    }
+    
+    .breadcrumb__item:first-child::before {
+        content: "";
+    }
+    /* main */
+    
+    .main {
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .main__title {
+        font-size: var(--size-h2);
+        font-family: "LatoBold";
+        margin-bottom: 20px;
+        line-height: 80px;
+        width: 55%;
+    }
+    
+    .main__left {
+        display: inline-block;
+        width: 55%;
+        line-height: 40px;
+    }
+    
+    .main-left__price {
+        font-family: "LatoSemibold";
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding: 2px 0px 2px 75px;
+        background-image: url(../img/исходники/purse.svg);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    
+    .main-left__sum {
+        font-size: 35px;
+        font-family: "LatoBold";
+    }
+    
+    .main-left__paragraph {
+        display: block;
+        opacity: var(--opacity-grey);
+    }
+    
+    .main-left__paragraph:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    .main__right {
+        display: inline-block;
+        position: absolute;
+        background-image: url(../img/исходники/1920/Superman.svg);
+        background-repeat: no-repeat;
+        width: 560px;
+        height: 560px;
+        top: 0%;
+        left: 58%;
+    }
+    
+    .main__right::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/исходники/1920/Bg\ stars.svg);
+        background-repeat: no-repeat;
+        bottom: -40px;
+        right: 0px;
+        left: 0px;
+        width: 620px;
+        height: 100%;
+        z-index: -1;
+    }
+    /* History */
+    
+    .history {
+        padding: 0px 100px;
+    }
+    
+    .history__title {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60%;
+        font-family: "LatoBold";
+        font-size: var(--size-h3);
+        margin-bottom: 85px;
+        text-align: center;
+        line-height: 64px;
+    }
+    
+    .history__card {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        opacity: var(--opacity-grey);
+        line-height: 40px;
+    }
+    
+    .history-card__img {
+        width: 459px;
+        height: 469px;
+        background-image: url(../img/history-spritee.png);
+        background-repeat: no-repeat;
+    }
+    
+    .history-card__img1 {
+        background-position: -504px -10px;
+    }
+    
+    .history-card__img2 {
+        background-position: -10px -10px;
+    }
+    
+    .history-card__text {
+        max-width: 60%;
+    }
+    /* education */
+    
+    .education__title {
+        font-size: var(--size-h2);
+        font-family: "LatoBold";
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        line-height: 64px;
+    }
+    
+    .education__stat4market {
+        background-repeat: no-repeat;
+        background-position: center bottom 1px;
+        background-size: 100% 6px;
+        background-image: linear-gradient(to right, #7C4EAB 0.73%, #DD51D4 95.85%);
+        border-radius: 5px;
+    }
+    
+    .education__text {
+        max-width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80px;
+        text-align: center;
+        opacity: var(--opacity-grey);
+    }
+    
+    .education__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .education__card {
+        min-width: 150px;
+        max-width: 20%;
+    }
+    
+    .education-card__img {
+        height: 70px;
+        width: 70px;
+        background-image: url(../img/sprites-education.png);
+    }
+    
+    .education-card__img1 {
+        background-position: -35px 110px;
+    }
+    
+    .education-card__img2 {
+        background-position: -175px -30px;
+    }
+    
+    .education-card__img3 {
+        background-position: -35px -30px;
+    }
+    
+    .education-card__img4 {
+        background-position: -175px 110px;
+    }
+    
+    .education-card__title {
+        font-family: "LatoSemibold";
+        font-size: var(--size-text);
+        margin-bottom: 15px;
+    }
+    
+    .education-card__text {
+        font-size: var(--size-textSmall);
+        opacity: var(--opacity-grey);
+    }
+    
+    @media (max-width:1350px) {
+        .container {
+            max-width: 1200px;
+        }
+         :root {
+            --size-h2: 46px;
+            --size-h3: 40px;
+            --size-text: 20px;
+            --size-textSmall: 16px;
+            --size-logoText: 10px
+        }
+        .body {
+            background-position-x: -50px;
+        }
+        .nav-logo__img {
+            width: 188px;
+            height: 44px;
+            background-position: -10px -88px;
+        }
+        .main__title,
+        .main__left {
+            width: 60%;
+        }
+        .main__right {
+            background-image: url(../img/исходники/1280/Superman1280.svg);
+            width: 435px;
+            height: 435px;
+            top: 0%;
+            left: 60%;
+        }
+        .main__right::before {
+            background-image: url(../img/исходники/1280/Bg\ stars1280.svg);
+        }
+        .history__card:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        .history-card__img {
+            width: 358px;
+            height: 359px;
+        }
+        .history-card__img1 {
+            background-position: -388px -504px;
+            ;
+        }
+        .history-card__img2 {
+            background-position: -10px -504px;
+        }
+    }
+    
+    @media (max-width:1150px) {
+        .container {
+            max-width: 740px;
+            padding: 0px 15px;
+        }
+        .body {
+            background-image: none;
+        }
+        .nav-logo__img {
+            width: 180px;
+            height: 40px;
+            background-position: -10px -152px;
+        }
+        .nav__phone {
+            display: none;
+        }
+        .nav__list {
+            display: none;
+        }
+        .nav__burger {
+            display: inline-block;
+        }
+        .main__title {
+            width: 100%;
+        }
+        .main__right {
+            background-image: url(../img/исходники/1150/Superman1150.png);
+            width: 410px;
+            height: 410px;
+            top: 35%;
+            left: 67%;
+        }
+        .main__right::before {
+            background-image: none;
+        }
+        .history__title,
+        .education__title,
+        .education__text {
+            max-width: 90%;
+        }
+        .history-card__img {
+            width: 270px;
+            height: 277px;
+        }
+        .history-card__img1 {
+            background-position: -979px -591px;
+            ;
+        }
+        .history-card__img2 {
+            background-position: -979px -10px;
+        }
+        .education__list {
+            justify-content: space-around;
+        }
+        .education__card {
+            max-width: 35%;
+            margin-bottom: 50px;
+        }
+    }
+    
+    @media(max-width:850px) {
+        .container {
+            max-width: 750px;
+        }
+        .nav-logo__img {
+            width: 140px;
+            height: 40px;
+            background-position: -10px -212px;
+        }
+        .history {
+            padding: 0px;
+        }
+        .education {
+            padding: 0px 50px;
+        }
+        .education__card {
+            max-width: 260px;
+            margin-bottom: 40px;
+        }
+    }
+    
+    @media(max-width:530px) {
+         :root {
+            --size-h2: 26px;
+            --size-h3: 24px;
+            --size-text: 18px;
+            --size-textSmall: 16px;
+        }
+        .container {
+            min-width: 330px;
+            padding: 0px 10px;
+        }
+        .nav-logo__img {
+            width: 140px;
+            height: 32px;
+            background-position: -10px -212px;
+        }
+        .nav-logo__text {
+            display: none;
+        }
+        .nav__btn {
+            font-size: 14px;
+            padding: 5px 20px 5px 40px;
+            background-image: url(../img/исходники/500/arrow500.svg);
+            background-position: 15px;
+        }
+        .main__title {
+            width: 60%;
+            line-height: 42px;
+        }
+        .main__left {
+            width: 100%;
+        }
+        .main__right {
+            background-image: url(../img/исходники/500/Superman500.svg);
+            top: 0%;
+        }
+        .history-card__text {
+            max-width: 100%;
+        }
+        .history-card__img2 {
+            order: -1;
+        }
+        .education__card {
+            text-align: center;
+        }
+        .education-card__img {
+            margin-left: 37%;
+        }
+    }

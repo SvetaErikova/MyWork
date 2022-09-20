@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>square</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        .square__small {
+            cursor: pointer;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .square__small:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        
+        .color__yellow {
+            background-color: yellow;
+        }
+        
+        .color__blue {
+            background-color: blue;
+        }
+        
+        .color__green {
+            background-color: green;
+        }
+        
+        .square__big {
+            width: 500px;
+            height: 500px;
+            background-color: grey;
+            transition: background-color 1s ease;
+        }
+        
+        .row {
+            padding: 100px 0px;
+            align-items: center;
+        }
+        
+        .animated {
+            animation-name: hide-bill;
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes hide-bill {
+            0% {
+                transform: rotate(-90deg) rotateY(1deg);
+                opacity: 1;
+            }
+            100% {
+                ransform: rotate(-90deg) rotateY(60deg);
+                opacity: 0;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-5">
+                <div class="square__small  color__yellow"></div>
+                <div class="square__small  color__blue"></div>
+                <div class="square__small  color__green"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="square__big id='big'"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let bills = document.querySelectorAll(".square__small")
+        let bill_acc = document.querySelector(".square__big")
+
+
+        for (bill of bills) {
+            bill.onmousedown = function(e) {
+                bill = e.currentTarget;
+                bill.style.position = "absolute";
+                bill.style.zIndex = 2;
+
+                document.addEventListener("mousemove", moveElement);
+                bill.onmouseup = function() {
+                    document.removeEventListener("mousemove", moveElement);
+                    bill.style.zIndex = 1;
+
+                    let bill_top = bill.getBoundingClientRect().top;
+                    let bill_left = bill.getBoundingClientRect().left;
+                    let bill_right = bill.getBoundingClientRect().right;
+                    let bill_acc_top = bill_acc.getBoundingClientRect().top;
+                    let bill_acc_left = bill_acc.getBoundingClientRect().left;
+                    let bill_acc_right = bill_acc.getBoundingClientRect().right;
+                    let bill_acc_bottom =
+                        bill_acc.getBoundingClientRect().bottom -
+                        (bill_acc.getBoundingClientRect().height / 3) * 2;
+
+                    if (
+                        bill_top > bill_acc_top &&
+                        bill_left > bill_acc_left &&
+                        bill_right < bill_acc_right &&
+                        bill_top < bill_acc_bottom
+                    ) {
+                        bill.classList.add("animated");
+                        setTimeout(function() {
+                            bill.hidden = true;
+                        }, 480);
+
+                        function getBck() {
+                            let bigColor = window.getComputedStyle(bill).backgroundColor
+                            bill_acc.style.backgroundColor = bigColor
+
+                        }
+                        getBck()
+
+                    }
+                    bill.ondragstart = function() {
+                        return false;
+                    };
+                }
+            };
+        };
+        let bigColor = window.getComputedStyle(bill).backgroundColor
+        console.log(bigColor)
+
+        function getBck() {
+            let bigColor = window.getComputedStyle(bill).backgroundColor
+            bill_acc.style.backgroundColor = bigColor
+
+        }
+
+
+        function moveElement(event) {
+            bill.style.left = event.clientX - 150 + 'px';
+            bill.style.top = event.clientY - 65 + 'px';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

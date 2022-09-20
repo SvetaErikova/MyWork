@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        #airplane {
+            position: absolute;
+        }
+        
+        #box {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            opacity: 0;
+        }
+    </style>
+    <div><img src="airplane.png" alt="" id="airplane"></div>
+    <div><img src="box.png" alt="" id="box"></div>
+    <script>
+        let airplane = document.getElementById('airplane')
+        let stepA = 0
+        let flag = true
+
+
+        let center = window.innerWidth / 2
+        let bottom = window.innerHeight
+        let point = true
+        let stepB = 0
+
+
+
+        function animationAirplane() {
+            if (window.innerWidth - 300 > stepA && flag) {
+                airplane.style.transform = 'scalex(-1)'
+                stepA += 1
+
+            } else {
+                airplane.style.transform = 'scalex(1)'
+                stepA -= 1
+                flag = stepA == 0 ? true : false
+
+            }
+            if (Math.round(window.innerWidth / 2) == stepA + 300) {
+                console.log("Самолет достиг середины экрана")
+
+                function animationBox() {
+                    box.style.left = center + 'px'
+                    box.style.top = 200 + 'px'
+                    box.style.opacity = 1
+                    if (bottom > stepB + 400 && point) {
+
+                        stepB += 1
+
+                    } else {
+                        point = false
+
+                    }
+                    box.style.top = stepB + 200 + 'px'
+                }
+                setInterval(animationBox, 10)
+            }
+            airplane.style.left = stepA + 'px'
+
+
+
+        }
+        setInterval(animationAirplane, 1)
+
+
+        console.log(stepA)
+        console.log(center)
+        console.log(bottom)
+    </script>
+</body>
+
+</html>

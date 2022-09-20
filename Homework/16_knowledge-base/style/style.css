@@ -1,0 +1,257 @@
+        @font-face {
+            font-family: "Opensans";
+            font-style: normal;
+            font-weight: 400;
+            src: url(../font/opensans-light.woff);
+            src: url(../font/opensans-light.woff2);
+            src: url(../font/OpenSans-Light.ttf);
+        }
+        
+        @font-face {
+            font-family: "Opensans";
+            font-style: bold;
+            font-weight: 600;
+            src: url(../font/opensans-bold.woff);
+            src: url(../font/opensans-bold.woff2);
+            src: url(../font/OpenSans-Bold.ttf);
+        }
+        
+        body {
+            font-family: "Opensans";
+            font-weight: 400;
+            background-color: #E5E5E5;
+        }
+        /*Чекбокс*/
+        
+        [class*='ground-pane'] {
+            filter: grayscale(1);
+        }
+        
+        .section {
+            margin-top: 150px;
+            margin-left: 150px;
+            margin-bottom: 250px;
+        }
+        
+        .checkbox {
+            max-width: 150px;
+            max-height: 290px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        
+        .title-animals {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .animal {
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+        
+        .animal-check {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .animal-check+span {
+            position: absolute;
+            margin-top: 1px;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            border: 1px solid #999999;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .animal-check:checked+span {
+            color: #CCB26E;
+            border: 1px solid #CCB26E;
+        }
+        
+        .animal-check+span:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 4px;
+            top: 25%;
+            bottom: 0;
+            left: 25%;
+            right: 0;
+            opacity: 0;
+            transition: opacity .3s ease;
+            box-sizing: border-box;
+            border-left: 1.5px solid #CCB26E;
+            border-bottom: 1.5px solid #CCB26E;
+            transform: rotate(-45deg);
+        }
+        
+        .animal-check:checked+span:before {
+            opacity: 1;
+        }
+        
+        .animal:not( :last-child) {
+            margin-bottom: 20px;
+        }
+        /* Скроллбар*/
+        
+        .custom-scroll {
+            width: 400px;
+            height: 310px;
+            padding: 30px 20px;
+            background-color: white;
+            line-height: 24px;
+        }
+        
+        .simplebar-scrollbar:before {
+            background-color: #CCB26E;
+        }
+        
+        .simplebar-content-wrapper {
+            overflow: auto;
+        }
+        /* Селект*/
+        
+        .choices {
+            width: 175px;
+        }
+        
+        .choices__inner {
+            z-index: 5;
+            width: 143px;
+            padding: 7px 15px;
+            border-radius: 10px;
+        }
+        
+        .is-open .choices__inner {
+            width: 143px;
+            border-radius: 10px;
+        }
+        
+        .choices__list--dropdown {
+            border-top: none;
+            padding-top: 20px;
+            width: 99%;
+            top: 30px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        
+        .choices__list {
+            z-index: -5;
+        }
+        /*Карта*/
+        
+        #map {
+            width: 600px;
+            height: 400px;
+        }
+        /*Форма */
+        
+        .form {
+            width: 440px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #000000;
+        }
+        
+        .form-label {
+            position: relative;
+        }
+        
+        .js-validate-error-label {
+            padding: 0px 0px 5px 10px;
+            position: absolute;
+            width: max-content;
+            top: -20px;
+            color: #FF5C00 !important;
+        }
+        
+        input {
+            width: 380px;
+            display: block;
+            margin-bottom: 30px;
+            padding: 20px 24px;
+            border-radius: 10px;
+        }
+        
+        .form-btn {
+            color: white;
+            padding: 18.5px 53px;
+            background-color: #FF5C00;
+            border-radius: 10px;
+        }
+        /*тултип*/
+        
+        .tooltip {
+            background-color: white;
+            width: 375px;
+            height: 160px;
+        }
+        
+        .tooltip-block {
+            padding: 20px 50px 20px 20px;
+            line-height: 24px;
+        }
+        
+        .tooltip-marker {
+            display: inline;
+            position: relative;
+        }
+        
+        .marker {
+            cursor: pointer;
+        }
+        
+        .marker path {
+            transition-property: fill;
+            transition-duration: 1s;
+        }
+        
+        .marker:hover path {
+            fill: #CCB26E;
+        }
+        
+        .marker:hover+.popup,
+        .marker:focus+.popup {
+            opacity: 1;
+        }
+        
+        .popup {
+            max-width: 180px;
+            width: max-content;
+            position: absolute;
+            padding-bottom: 20px;
+            bottom: 15px;
+            right: 15px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            transform: translateX(60%);
+            color: white;
+        }
+        
+        .popup::before {
+            content: "";
+            position: absolute;
+            bottom: 2%;
+            left: 40%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px;
+            border-color: gray transparent transparent transparent;
+        }
+        
+        .popup-text {
+            background-color: gray;
+            padding: 5px;
+        }

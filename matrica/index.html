@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=" stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200 " />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.media.css">
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+        </div>
+        <div class="container">
+            <form class="obratnuj-zvonok" action='php/email.php' method='POST'>
+                <span class="obratnuj-zvonok__close"></span>
+                <div class="form-zvonok">
+                    <div>
+                        <label>Имя <span>*</span></label>
+                        <input id="name" type='text' name='name' required></div>
+                    <div>
+                        <label>Номер телефона (с кодом) <span>*</span></label>
+                        <input id="tel" type='tel' name='phone' required></div>
+                    <div>
+                        <label>Сообщение</label>
+                        <input type='text' name='question'>
+                    </div>
+                    <input class="bot-send-mail" type='submit' value='Послать заявку'>
+                </div>
+            </form>
+            <div class="form__send">
+                <div>Ваша заявка успешно отправлена!</div>
+                <div>Менеджер свяжется с вами в течении 15 мин.</div>
+            </div>
+            <div class="header__block col-lg-6 col-md-10 col-12">
+                <div>
+                    <h1 class="header__title">Школа матрицы "Оливиан"</h1>
+                    <div class="header__description">В нашей школе вы научитесь разбираться в любом человеке и получите востребованную профессию <b>нумеролога.</b> </div>
+                </div>
+                <button class="header__btn btn__zvonok">Обратная связь</button>
+
+                <a class="header__btn" href="#program">Программа курса</a>
+            </div>
+        </div>
+    </header>
+    </div>
+    <section class="cuorse">
+        <div class="container">
+            <h2 class="course__title">О курсе </h2>
+            <div class="course__block col-12">
+                <div class="course__card course__card-1 col-xl-3  col-lg-6 col-12">Научитесь проводить расчёт, составлять и анализировать кармическую матрицу Судьбы по любой дате рождения;</div>
+                <div class="course__card course__card-2 col-xl-3  col-lg-6 col-12">Узнаете, из каких элементов состоит кармическая матрица Судьбы, что они означают, и как искать в готовом анализе нужную информацию;</div>
+                <div class="course__card course__card-3 col-xl-3  col-lg-6 col-12">Научитесь анализировать темы и проблемы, связанные с деньгами, отношениями, предназначением, семейными и родовыми вопросами</div>
+                <div class="course__card course__card-4 col-xl-3  col-lg-6 col-12">Поймёте, как искать причины трудностей человека в прошлом и как сделать так, чтобы ошибки прошлого не влияли на настоящее и будущее;</div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="row  about__block">
+                <div class="col-lg-7 col-md-8  ">
+                    <h2 class="about__name">Кристина Иругова </h2>
+                    <h3>нумеролог, психолог и коуч</h3>
+                    <div class="about__text">1.5 года нумерологической практики и 6 лет эзотерики 4 года консультирую по психологии. Обучила более 200 человек жить в гармонии с собой, строить экологичные отношения с людьми и партнёром, зарабатывать деньги. Провела более 1000
+                        консультаций. Обучалась у Кристины Егиазаровой главного нумеролога и духовного наставника шоубизнеса России.
+                    </div>
+                </div>
+                <div class="about__photo col-lg-4 col-md-8 ">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="program" id="program">
+        <div class="container">
+            <div class="row">
+                <h2 class="program__title col-12"> Программа курса</h2>
+                <div id="accordion">
+                    <h3 class="program__modul program-modul">Модуль 1</h3>
+                    <ul>
+                        <li class="program-modul__item">22 Арканов</li>
+                        <li class="program-modul__item">Что такое карма? Виды кармы</li>
+                        <li class="program-modul__item">Построение 5 конечной звезды</li>
+                    </ul>
+                    <h3 class="program__modul program-modul">Модуль 2</h3>
+                    <ul>
+                        <li class="program-modul__item">Первое предназначение</li>
+                        <li class="program-modul__item">Второе предназначение</li>
+                        <li class="program-modul__item">Третье предназначение</li>
+                        <li class="program-modul__item">Четвёртое предназначение</li>
+                        <li class="program-modul__item">Пятое предназначение</li>
+                        <li class="program-modul__item">4 ошибки, за которые ты в ответе</li>
+                    </ul>
+                    <h3 class="program__modul program-modul">Модуль 3</h3>
+                    <ul>
+                        <li class="program-modul__item">Треугольник личности</li>
+                        <li class="program-modul__item">Треугольник духовный</li>
+                        <li class="program-modul__item">Треугольник денежный</li>
+                        <li class="program-modul__item">Треугольник отношений</li>
+                        <li class="program-modul__item">Треугольник здоровья</li>
+                        <li class="program-modul__item">Роковая ошибка</li>
+                    </ul>
+                    <h3 class="program__modul program-modul">Модуль 4</h3>
+                    <ul>
+                        <li class="program-modul__item">Кармические узлы</li>
+                        <li class="program-modul__item">Исходный код души - миссия</li>
+                        <li class="program-modul__item">Прогнозирование жизни: 12 уроков</li>
+                        <li class="program-modul__item">12 узлов времени</li>
+                        <li class="program-modul__item">Совместимость матриц </li>
+                        <li class="program-modul__item">Чакры</li>
+                        <li class="program-modul__item">Примеры работы с ⭐️</li>
+                        <li class="program-modul__item">Детская матрица</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <section class="rate">
+        <div class="container">
+            <div class="row">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide rate__swiper-slide"></div>
+                        <div class="swiper-slide rate__swiper-slide"></div>
+                        <div class="swiper-slide rate__swiper-slide"></div>
+                    </div>
+                </div>
+                <h2 class="rate__title">Тарифы</h2>
+                <div class="rate__block col-12">
+                    <div class="rate__card rate-card col-lg-3 col-md-8 col-10">
+                        <div class="rate-card__title">
+                            <h3>Психопортрет человека «ДЛЯ СЕБЯ»</h3>
+                        </div>
+                        <ul class="rate-card__list">
+                            <li class="rate-card__item">Уроки 1-5 основной программы</li>
+                            <li class="rate-card__item">Общий чат участников</li>
+                            <li class="rate-card__item">Вспомогательные материалы</li>
+                            <li class="rate-card__item"><del>Выдача сертификата консультанта</del> </li>
+                            <li class="rate-card__item"><del>VIP-чат с ответами от Кристины</del> </li>
+                            <li class="rate-card__item"><del>Разбор домашних заданий</del> </li>
+                            <li class="rate-card__item"><del>Групповой созвон с разбором</del> </li>
+                        </ul>
+                        <div>
+                            <div class="rate-card__price">4888₽</div>
+                            <div class="rate-card__place">
+                                <div>КОЛИЧЕСТВО МЕСТ</div>
+                                <div> НЕОГРАНИЧЕНО</div>
+                            </div>
+                            <button class="rate-card__btn">Купить </button>
+                        </div>
+                    </div>
+                    <div class="rate__card rate-card col-lg-3 col-md-8 col-10">
+                        <div class="rate-card__title">
+                            <h3>Исходный код «ЭКСПЕРТ»</h3>
+                        </div>
+                        <ul class="rate-card__list">
+                            <li class="rate-card__item">Уроки основной программы</li>
+                            <li class="rate-card__item">Общий чат участников</li>
+                            <li class="rate-card__item">Вспомогательные материалы</li>
+                            <li class="rate-card__item">Дополнительный вебинар "вопрос-ответ" с Кристиной</li>
+                            <li class="rate-card__item">Выдача сертификата консультанта</li>
+                            <li class="rate-card__item"><del>VIP-чат с ответами от Кристины</del> </li>
+                            <li class="rate-card__item"><del>Разбор домашних заданий</del> </li>
+                            <li class="rate-card__item"><del>Групповой созвон с разбором</del> </li>
+                        </ul>
+                        <div>
+                            <div class="rate-card__price">9888₽</div>
+                            <div class="rate-card__place">
+                                <div>ОСТАЛОСЬ</div>
+                                <div> 20 МЕСТ</div>
+                            </div>
+                            <button class="rate-card__btn">Купить </button>
+                        </div>
+                    </div>
+                    <div class="rate__card rate-card col-lg-3 col-md-8 col-10">
+                        <div class="rate-card__title">
+                            <h3>V.I.P. </h3>
+                        </div>
+                        <ul class="rate-card__list">
+                            <li class="rate-card__item">Все уроки основной программы</li>
+                            <li class="rate-card__item">Общий чат участников</li>
+                            <li class="rate-card__item">Вспомогательные материалы</li>
+                            <li class="rate-card__item">Дополнительный вебинар "вопрос-ответ" с Кристиной</li>
+                            <li class="rate-card__item">VIP-чат с ответами от Кристины</li>
+                            <li class="rate-card__item">Разбор домашних заданий </li>
+                            <li class="rate-card__item">Групповой созвон с разбором </li>
+                            <li class="rate-card__item">Бонус</li>
+                            <li class="rate-card__item">Выдача диплома</li>
+                        </ul>
+                        <div>
+                            <div class="rate-card__price">17444₽</div>
+                            <div class="rate-card__place">
+                                <div>ОСТАЛОСЬ </div>
+                                <div> 8 МЕСТ</div>
+                            </div>
+                            <button class="rate-card__btn">Купить </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="end">
+        <div class="container">
+            <h2> По окончанию нашей школы вы:</h3>
+                <div class="end__text"><i class="bi bi-mortarboard"></i> Изучите базу для освоения профессии нумеролога и сможете помогать другим людям;</div>
+                <div class="end__text"><i class="bi bi-fire"></i> Найти дело, которым вы горите;</div>
+                <div class="end__text"><i class="bi bi-calendar-heart"></i> Построить отношения, основанные на уважении и безусловной любви;</div>
+                <div class="end__text"><i class="bi bi-check-circle"></i> Убрать «фильтры», которые мешают зарабатывать: страхи, блокирующие установки и негативные ассоциации;</div>
+                <div class="end__text"><i class="bi bi-lightbulb"></i> Понять, чему учиться, какую освоить профессию и как это делать с удовольствием;</div>
+                <div class="end__text"><i class="bi bi-people-fill"></i> Наладить отношения с родителями, научиться принимать и благодарить;</div>
+        </div>
+    </section>
+    <section class="credit">
+        <div class="container">
+            <div class="row">
+                <h2>РАССРОЧКА И ПРЕДОПЛАТА</h2>
+                <div class="accordion" id="accordion-credit">
+                    <h3 class="accordion__title">КАК РАБОТАЕТ ПРЕДОПЛАТА?</h3>
+                    <div class="accordion__item">Внеся предоплату 1888 рублей , вы бронируете за собой место на обучении. </div>
+                    <h3 class="accordion__title">КАК РАБОТАЕТ РАССРОЧКА?</h3>
+                    <div>
+                        <div class="accordion__item">Рассрочка оформляется без процентов, то есть вы не переплачиваете — все проценты банку мы оплачиваем сами.</div>
+                        <div class="accordion__item">После выбора тарифа и заполнения ваших данных, на странице оплаты выбираете пункт «Оплатить в рассрочку» и заполняете анкету от банка.</div>
+                        <div class="accordion__item">Беспроцентная рассрочка от банка Тинькофф предоставляется только гражданам РФ.</div>
+                        <div class="accordion__item">Срок одобрения банком занимает от 5 минут.</div>
+                        <div class="accordion__item">Если вам отказали в рассрочке напишите нам</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="swiper-container">
+            <div class="swiper-wrapper footer__slider">
+                <!-- Slides -->
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+        </div>
+        <div class="footer__container container ">
+            <ul>
+                <li class="footer__item footer-item "><a class="footer-item__link" href=" "><svg class="footer-item__icon"   width="45 " height="45 " viewBox="0 0 45 45 " fill="none " xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222
+                29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072
+                25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354
+                15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157
+                22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163
+                18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206
+                17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89
+                36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z " fill="#CACACA "/>
+                    </svg>
+                    </a></li>
+                <li class="footer__item footer-item "><a class="footer-item__link" href=" "><svg class="footer-item__icon" width="45 " height="45 " viewBox="0 0 45 45 " fill="none " xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.1172 22.5C18.1172 24.8785 20.0453 26.8066 22.4238 26.8066C24.8024 26.8066 26.7305 24.8785 26.7305 22.5C26.7305 20.1215 24.8024 18.1934 22.4238 18.1934C20.0453 18.1934 18.1172 20.1215 18.1172 22.5Z " fill="#CACACA "/>
+                    <path d="M12.3521 14.8803C12.5591 14.3194 12.8894 13.8116 13.3186 13.3948C13.7354 12.9656 14.2428 12.6354 14.8041 12.4283C15.2594 12.2515 15.9433 12.0411 17.2029 11.9837C18.5656 11.9216 18.9741 11.9082 22.4238 11.9082C25.8739 11.9082
+                26.2824 11.9212 27.6447 11.9834C28.9044 12.0411 29.5886 12.2515 30.0435 12.4283C30.6049 12.6354 31.1126 12.9656 31.5291 13.3948C31.9582 13.8116 32.2885 14.319 32.4959 14.8803C32.6727 15.3356 32.8832 16.0198 32.9405 17.2795C33.0026 18.6418
+                33.016 19.0503 33.016 22.5004C33.016 25.9501 33.0026 26.3587 32.9405 27.7213C32.8832 28.981 32.6727 29.6649 32.4959 30.1201C32.2885 30.6814 31.9586 31.1889 31.5294 31.6057C31.1126 32.0348 30.6052 32.3651 30.0439 32.5721C29.5886 32.7493 28.9044
+                32.9597 27.6447 33.0171C26.2824 33.0792 25.8742 33.0922 22.4242 33.0922C18.9738 33.0922 18.5652 33.0792 17.2033 33.0171C15.9436 32.9597 15.2594 32.7493 14.8041 32.5721C13.6773 32.1375 12.7868 31.2469 12.3521 30.1201C12.1753 29.6649 11.9648
+                28.981 11.9072 27.7213C11.845 26.3587 11.832 25.9501 11.832 22.5004C11.832 19.0503 11.845 18.6418 11.9072 17.2795C11.9645 16.0198 12.175 15.3356 12.3521 14.8803ZM22.4238 29.1344C26.0881 29.1344 29.0585 26.1643 29.0585 22.5001C29.0585 18.8358
+                26.0881 15.8657 22.4238 15.8657C18.7599 15.8657 15.7895 18.8358 15.7895 22.5001C15.7895 26.1643 18.7599 29.1344 22.4238 29.1344ZM15.5272 17.1538C16.3834 17.1538 17.0776 16.4596 17.0776 15.6034C17.0776 14.7471 16.3834 14.0529 15.5272 14.0529C14.6709
+                14.0529 13.9767 14.7471 13.9767 15.6034C13.9771 16.4596 14.6709 17.1538 15.5272 17.1538Z " fill="#CACACA "/>
+                    <path d="M22.6204 0C34.9364 0 44.9238 9.98747 44.9238 22.3034C44.9238 34.6194 34.9364 44.6069 22.6204 44.6069C10.3044 44.6069 0.316958 34.6194 0.316958 22.3034C0.316958 9.98747 10.3044 0 22.6204 0ZM9.8906 27.5836C9.95253 28.9469
+                10.1693 29.8777 10.4858 30.6924C11.1512 32.4127 12.5111 33.7727 14.2314 34.438C15.0458 34.7545 15.9769 34.971 17.3399 35.0332C18.7057 35.0955 19.1419 35.1105 22.6201 35.1105C26.0985 35.1105 26.5345 35.0955 27.9005 35.0332C29.2635 34.971 30.1946
+                34.7545 31.009 34.438C31.8639 34.1164 32.6378 33.6124 33.2776 32.9607C33.929 32.3212 34.433 31.547 34.7546 30.6924C35.0711 29.878 35.2879 28.9469 35.3498 27.5839C35.4128 26.2178 35.4274 25.7815 35.4274 22.3034C35.4274 18.8253 35.4128 18.389
+                35.3502 17.0233C35.2883 15.66 35.0718 14.7292 34.7553 13.9145C34.4337 13.0599 33.9293 12.2857 33.2776 11.6462C32.6382 10.9945 31.8639 10.4905 31.0094 10.1689C30.1946 9.85236 29.2638 9.63592 27.9005 9.57364C26.5348 9.51136 26.0985 9.49638 22.6204
+                9.49638C19.1423 9.49638 18.706 9.51136 17.3403 9.57398C15.9769 9.63592 15.0462 9.85236 14.2314 10.1685C13.3769 10.4901 12.6026 10.9945 11.9628 11.6462C11.3114 12.286 10.8071 13.0599 10.4858 13.9145C10.169 14.7292 9.95253 15.66 9.89026 17.0233C9.82798
+                18.389 9.81334 18.8253 9.81334 22.3034C9.81334 25.7815 9.82798 26.2178 9.8906 27.5836Z " fill="#CACACA "/>
+                    </svg>
+                    
+                    </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>

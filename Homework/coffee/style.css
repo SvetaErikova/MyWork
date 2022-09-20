@@ -1,0 +1,110 @@
+body {
+    background-image: url(bck-coffee.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.coffee_btn {
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-left: 70px solid rgb(220, 42, 42);
+    border-bottom: 35px solid transparent;
+    cursor: pointer;
+}
+
+.coffee_btn:hover {
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-left: 70px solid rgb(141, 26, 26);
+    border-bottom: 35px solid transparent;
+}
+
+.coffee_block {
+    background-color: rgb(240, 156, 54);
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+.coffee_block span {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 70px;
+    vertical-align: middle;
+    padding-left: 0.5rem;
+    color: white;
+}
+
+.display {
+    align-items: center;
+    padding: 50px 50px;
+    background-color: beige;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.rub {
+    cursor: pointer;
+    transform: rotate(90deg);
+    max-height: 100px;
+    width: auto;
+}
+
+.rub:hover {
+    filter: contrast(150%);
+}
+
+.animated {
+    animation-name: hide-bill;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+
+@keyframes hide-bill {
+    0% {
+        transform: rotate(-90deg) rotateY(1deg);
+        opacity: 1;
+    }
+    100% {
+        ransform: rotate(-90deg) rotateY(60deg);
+        opacity: 0;
+    }
+}
+
+.bg-progress {
+    background-color: rgb(207, 149, 40);
+}
+
+.box-progress {
+    height: 1.4rem;
+}
+
+.changeBox {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(207, 149, 40, 0.6);
+    border: 1px solid black;
+    position: relative;
+}
+
+img[src$="rub.png"] {
+    width: 70px;
+    position: absolute;
+}
+
+img[src$="rub.png"]:hover {
+    filter: contrast(150%);
+}
+
+img[src$="rub.png"]:active {
+    display: none;
+}

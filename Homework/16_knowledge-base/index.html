@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/normalize.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+
+    <link rel="stylesheet" href="style/choices.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <div class="section checkbox">
+        <div class="title-animals"> Категории :</div>
+        <label class="animal"><input class="animal-check" type="checkbox" name="category" >
+            Динозавры
+            <span></span>
+        </label>
+        <label class="animal"><input class="animal-check" type="checkbox" name="category">
+            Медведи
+            <span></span>
+        </label>
+        <label class="animal"><input class="animal-check" type="checkbox" name="category">
+            Косули
+            <span></span>
+        </label>
+        <label class="animal"><input class="animal-check" type="checkbox" name="category">
+            Лисы
+            <span></span>
+        </label>
+        <label class="animal"><input class="animal-check" type="checkbox" name="category">
+            Волки
+            <span></span>
+        </label>
+        <label class="animal"><input class="animal-check" type="checkbox" name="category">
+            Олени и лоси
+            <span></span>
+        </label>
+
+    </div>
+
+    <div class="section select">
+        <select name="Материал">
+            <option disabled selected> Материал</option>
+            <option value="Древесина">Древесина</option>
+            <option value="Металл">Металл</option>
+            <option value="Камень">Камень</option>
+            <option value="Пластик">Пластик</option>
+            <option value="Композит">Композит</option>
+            <option value="Гипс">Гипс</option>
+
+        </select>
+
+
+    </div>
+
+    <div class="section map">
+
+        <div id="map"></div>
+
+    </div>
+
+    <div class="section scroll">
+
+        <div class="custom-scroll" data-simplebar>
+            Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная
+            концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно
+            интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые
+            горизонты для первоочередных требований.
+        </div>
+    </div>
+
+
+    <div class="section">
+        <form class="form">
+            <label class="form-label" for="name">
+            <input id="name" name="name" type="text" placeholder="Имя*" data-validate-field="name"></label>
+            <label class="form-label" for="tel">
+            <input id="tel" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel"></label>
+            <label class="form-label" for="mail">
+            <input id="mail" name="mail" type="email" placeholder="E-mail*" data-validate-field="mail"></label>
+
+            <button class="form-btn">Заказать</button>
+        </form>
+
+    </div>
+
+
+    <div class="section tooltip">
+        <div class="tooltip-block">
+            Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+            <div class="tooltip-marker">
+                <span class="marker" tabindex="0"><svg class="marker-svg" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+                            fill="#BCBCBC" />
+                    </svg>
+                </span>
+
+                <div class="popup">
+                    <div class="popup-text">Глава 2, страница 176</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>

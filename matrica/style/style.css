@@ -1,0 +1,577 @@
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: url(../font/montserrat-v15-latin_cyrillic-ext-regular.woff2);
+        src: url(../font/montserrat-v15-latin_cyrillic-ext-regular.woff);
+    }
+    
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        src: url(../font/montserrat-v15-latin_cyrillic-600.woff2);
+        src: url(../font/montserrat-v15-latin_cyrillic-600.woff);
+    }
+    
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 800;
+        src: url(../font/montserrat-v15-latin_cyrillic-ext-800.woff2);
+        src: url(../font/montserrat-v15-latin_cyrillic-ext-800.woff);
+    }
+    
+     :root {
+        --color-light-purple: #d69cf4;
+        --color-purple: #80379c;
+        --color-black: #000000;
+    }
+    
+    .header__btn,
+    .rate__card,
+    .rate-card__btn {
+        border-radius: 30px;
+        transition: border, box-shadow, 0.3s ease;
+        border: 1px solid var(--color-purple);
+        box-shadow: 0 0 25px -10px var(--color-purple);
+    }
+    
+    .header__btn:hover,
+    .rate__card:hover,
+    .rate-card__underline,
+    .rate-card__btn:hover {
+        border: 1px solid var(--color-light-purple);
+        box-shadow: 0 0 25px -10px var(--color-light-purple);
+    }
+    
+    .course__card {
+        border-radius: 30px;
+        transition: border, box-shadow, 0.3s ease;
+        border: 1px solid var(--color-light-purple);
+        box-shadow: 0 0 25px -10px var(--color-light-purple);
+    }
+    
+    .course__card:hover {
+        border-radius: 30px;
+        transition: border, box-shadow, 0.3s ease;
+        border: 1px solid var(--color-purple);
+        box-shadow: 0 0 25px -10px var(--color-purple);
+    }
+    
+    h1 {
+        font-size: 72px;
+        font-weight: 600;
+    }
+    
+    h2 {
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-size: 48px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul {
+        padding: 0px;
+    }
+    
+    li {
+        list-style-type: none;
+        padding: 0px;
+    }
+    
+    body {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        line-height: 32px;
+    }
+    
+    section {
+        padding: 50px 0px;
+    }
+    
+    .container {
+        max-width: 1600px;
+        min-width: 400px;
+        width: auto;
+        margin: auto;
+    }
+    
+    .header {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        color: white;
+        background-color: black;
+        background-image: url(../img/rate-bck.png);
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-wrapper {
+        position: absolute;
+    }
+    
+    .swiper-slide {
+        background-image: url(../pngegg.png);
+        /*background-image: url(../img/about-bck.png);*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 60%;
+        /*top: -50%;*/
+    }
+    
+    .header__block {
+        position: relative;
+        z-index: 5;
+        padding: 150px 50px;
+    }
+    
+    .header__title {}
+    
+    .header__description {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    
+    .header__btn {
+        cursor: pointer;
+        font-weight: 600;
+        color: white;
+        padding: 15px 40px;
+        background-color: var(--color-black);
+    }
+    
+    .header__btn:hover {
+        color: white;
+    }
+    
+    .obratnuj-zvonok {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 30%;
+        left: 40%;
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .obratnuj-zvonok__close {
+        text-align: right;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    
+    .obratnuj-zvonok__close::before {
+        content: '\2715';
+        cursor: pointer;
+        top: 0;
+        left: 0%;
+    }
+    
+    .obratnuj-zvonok-active {
+        display: block;
+    }
+    
+    .form-zvonok {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .form-zvonok div {
+        padding: 15px 0;
+    }
+    
+    .bot-send-mail {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    
+    .form-zvonok label,
+    .form-zvonok input {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .form-zvonok label {
+        margin-bottom: 5px;
+    }
+    
+    .form-zvonok input {
+        padding: 10px 15px;
+        margin-top: 10px;
+        border: 1px solid var(--color-purple);
+        border-radius: 30px;
+        box-shadow: 0 0 25px -10px var(--color-purple);
+    }
+    
+    .form-zvonok label span {
+        color: var(--color-purple);
+    }
+    
+    .form-zvonok .bot-send-mail {
+        padding: 10px;
+        margin-top: 10px;
+        background: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: black;
+        cursor: pointer;
+        border: 1px solid var(--color-purple);
+        border-radius: 30px;
+        box-shadow: 0 0 25px -10px var(--color-purple);
+    }
+    
+    .form-zvonok .bot-send-mail:hover {
+        border: 1px solid var(--color-light-purple);
+        border-radius: 30px;
+        box-shadow: 0 0 25px -10px var(--color-light-purple);
+    }
+    
+    .form__send {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 30%;
+        left: 40%;
+        width: 100%;
+        max-width: 350px;
+        color: white;
+        padding: 20px 30px;
+        border: 1px solid var(--color-light-purple);
+        border-radius: 30px;
+        box-shadow: 0 0 25px -10px var(--color-light-purple);
+    }
+    /* */
+    
+    .course__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .course__title {
+        text-align: center;
+    }
+    
+    .course__card {
+        padding: 150px 15px 30px 15px;
+        max-width: 320px;
+        transition: background-image, 0.2s ease;
+    }
+    
+    .course__card {
+        background-image: url(../img/star.png);
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    
+    .course__card:hover {
+        background-image: url(../img/star-hover.png);
+    }
+    /*.course__card-2 {
+        background-image: url(../img/scales.png);
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    
+    .course__card-2:hover {
+        background-image: url(../img/scales-hover.png);
+    }
+    
+    .course__card-3 {
+        background-image: url(../img/love.png);
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    
+    .course__card-3:hover {
+        background-image: url(../img/love-hover.png);
+    }
+    
+    .course__card-4 {
+        background-image: url(../img/money.png);
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    
+    .course__card-4:hover {
+        background-image: url(../img/money-hover.png);
+    }*/
+    
+    .about {
+        position: relative;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        background-image: url(../img/rate-bck.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .about:before {
+        content: '';
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        height: 100%;
+        opacity: 50%;
+        background-image: url(../img/about-bck.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .about__block {
+        justify-content: space-between;
+    }
+    
+    .about__name {
+        margin-bottom: 30px;
+    }
+    
+    .about__text {
+        font-size: 24px;
+    }
+    
+    .about__photo {
+        max-width: 400px;
+        height: 500px;
+        margin: auto;
+        background-image: url(../img/Kris.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .program__title {
+        text-align: center;
+    }
+    
+    .program__modul {
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        padding: 20px 0px;
+        margin: 0px;
+        border-top: 2px solid var(--color-light-purple);
+        transition: all, ease 0.5;
+    }
+    
+    .program__modul {
+        border-bottom: 2px solid var(--color-light-purple);
+    }
+    
+    .program__modul:hover,
+    .program__modul:active {
+        border-color: var(--color-purple);
+    }
+    
+    .program__modul:hover+.program__modul {
+        border-bottom-color: var(--color-purple);
+    }
+    
+    .program-modul__item {
+        /* Прячем часть линий, выходящие за пределы блока */
+        overflow: hidden;
+        /* Выравниваем заголовок по центру, можно указать left, right для выравнивания влево или вправо */
+        text-align: center;
+        /* Размер заголовка */
+        font-size: 25px;
+    }
+    
+    .program-modul__item:before,
+    .program-modul__item:after {
+        /* Свойство content необходимо указывать хотя бы пустое, иначе псевдоэлементы не отобразятся */
+        content: "";
+        /* Свойства линий, выравнивание по центру по вертикали */
+        display: inline-block;
+        vertical-align: middle;
+        /* Ширина - 100% и указываем толщину линии */
+        width: 100%;
+        height: 2px;
+        /* Цвет линии */
+        background-color: var(--color-light-purple);
+        /* Возможность для пседоэлементов изменить позицию линии */
+        position: relative;
+    }
+    
+    .program-modul__item:before {
+        /* Ставим левую линию слева от текста, смещая ее на 100% влево */
+        margin-left: -100%;
+        /* Отступ линии от заголовка */
+        left: -14px;
+    }
+    
+    .program-modul__item:after {
+        /* Ставим правую линию справа от текста, смещая ее на 100% вправо */
+        margin-right: -100%;
+        /* Отступ линии от заголовка */
+        right: -14px;
+    }
+    
+    .rate {
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        background-image: url(../img/rate-bck.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .rate__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 70px 50px;
+        background: rgba(128, 55, 156, 0.3);
+    }
+    
+    .rate__title {
+        text-align: center;
+    }
+    /*.rate-card__underline {
+        align-self: center;
+        width: 100%;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: border, box-shadow, 0.3s ease;
+        border: 1px solid var(--color-purple);
+        box-shadow: 0 0 25px -10px var(--color-purple);
+    }*/
+    
+    .rate__block {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .rate-card__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 120px;
+        transition: border, box-shadow, 0.3s ease;
+        border-bottom: 2px solid var(--color-purple);
+    }
+    
+    .rate-card__list {
+        margin-bottom: 30px;
+    }
+    
+    .rate-card__item {
+        text-align: left;
+        list-style-type: circle;
+    }
+    
+    .rate-card__item del {
+        color: gray;
+    }
+    
+    .rate-card__price {
+        font-size: 48px;
+        margin-bottom: 15px;
+        text-shadow: 4px 2px 2px var(--color-purple);
+    }
+    
+    .rate-card__place {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .rate-card__btn {
+        color: white;
+        padding: 15px 60px;
+        font-size: 24px;
+        background: rgba(128, 55, 156, 0.7);
+    }
+    /*END*/
+    
+    .end__text {
+        font-size: 24px;
+        padding: 10px 0px 10px 0px;
+    }
+    /*CREDIT*/
+    
+    .accordion__title {
+        cursor: pointer;
+        margin: 0px;
+        padding: 20px 0px;
+        border-top: 2px solid var(--color-light-purple);
+        transition: border-top, border-bottom, ease 0.5;
+    }
+    
+    .accordion__title:not(:last-child) {
+        border-bottom: 2px solid var(--color-light-purple);
+    }
+    
+    .accordion__title:hover {
+        border-top: 2px solid var(--color-purple);
+        border-bottom: 2px solid var(--color-purple);
+    }
+    
+    .accordion__item {
+        padding: 10px 0px;
+        border-bottom: 1px solid var(--color-light-purple);
+    }
+    
+    footer {
+        position: relative;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        padding: 40px;
+        background-image: url(../img/rate-bck.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .footer__slider {
+        top: -40%;
+    }
+    
+    .footer__container {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    
+    .footer__item {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .footer__item:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .footer-item path {
+        transition-property: fill;
+        transition-duration: 0.3s;
+    }
+    
+    .footer-item__icon:focus>path,
+    .footer-item__icon:hover>path {
+        fill: var( --color-light-purple);
+    }
+    
+    .footer-item__icon:active>path {
+        fill: var(--color-purple);
+    }
