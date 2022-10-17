@@ -5,7 +5,6 @@ const swiper = new Swiper('.swiper-container', {
     loopFillGroupWithBlank: true,
     simulateTouch: false,
     speed: 15000,
-    spaceBetween: -1000,
     centeredSlides: true,
     autoplay: {
         delay: 0,
