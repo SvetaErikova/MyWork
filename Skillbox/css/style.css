@@ -444,7 +444,7 @@
         }
     }
     
-    @media (max-width: 450px) {
+    @media (max-width: 570px) {
          :root {
             --size-title: 30px;
             --size-h3: 20px;
