@@ -14,26 +14,44 @@ burgerBtn.addEventListener('click', (e) => {
 });
 
 
-//HEADER TABS
-
-document.querySelectorAll('.bottom__item').forEach(function(bottomItem) {
-    bottomItem.addEventListener('click', function(e) {
-        const path = e.currentTarget.dataset.path;
-        document.querySelectorAll('.bottom__item').forEach(function(btn) {
-            btn.classList.remove('bottom__item--active')
-        });
-        e.currentTarget.classList.add('bottom__item--active');
-        document.querySelectorAll('.scroll__content').forEach(function(bottomItem) {
-            bottomItem.classList.remove('scroll__content--active')
-        });
-        document.querySelector(`[data-target="${path}"]`).classList.add('scroll__content--active ');
+//HEADER BOTTOM NAV
+document.querySelectorAll(".dropdown__simplebar").forEach(dropdown => {
+    new SimpleBar(dropdown, {
+        /* чтобы изначально ползунок был виден */
+        autoHide: false,
+        /* с помощью этого значения вы можете управлять высотой ползунка*/
+        scrollbarMaxSize: 25,
     });
-});
+})
+
+
+const btns = document.querySelectorAll(".menu__btn");
+const dropdowns = document.querySelectorAll(".dropdown");
+const activeClassdropdowns = "dropdown__active";
+const activeClassbtns = "btn__active";
+
+btns.forEach(item => {
+    item.addEventListener("click", function() {
+        let DropThis = this.parentElement.querySelector(".dropdown");
+        dropdowns.forEach(el => {
+            if (el != DropThis) {
+                el.classList.remove(activeClassdropdowns)
+            }
+        });
+        btns.forEach(el => {
+            if (el != this) {
+                el.classList.remove(activeClassbtns)
+            }
+        });
+        DropThis.classList.toggle(activeClassdropdowns);
+        this.classList.toggle(activeClassbtns);
+    })
+})
 
 
 //  SWIPER HERO
 
-const swiper = new Swiper('.hero__swiper-container', {
+const swiper = new Swiper('.swiper-hero', {
     direction: 'horizontal',
     slidesPerView: 1,
     loop: true,
@@ -56,19 +74,26 @@ const choices = new Choices(element, {
 const swiper1 = new Swiper('.gallery-swiper', {
     direction: 'horizontal',
     slidesPerView: 1,
+    slidesPerGroup: 1,
     centerInsufficientSlides: true,
     swipe: true,
     navigation: {
         nextEl: '.gallery__swiper-next',
         prevEl: '.gallery__swiper-prev',
     },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+    },
     breakpoints: {
         480: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 40
         },
         1200: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 50
         }
     }
@@ -106,9 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // EVENT SWIPER
 const swiper2 = new Swiper('.events-swiper', {
     direction: 'horizontal',
-    swipe: true,
     slidesPerView: 1,
     centerInsufficientSlides: true,
+    swipe: true,
     navigation: {
         nextEl: '.events__swiper-next',
         prevEl: '.events__swiper-prev',
@@ -118,21 +143,18 @@ const swiper2 = new Swiper('.events-swiper', {
             slidesPerView: 2,
             spaceBetween: 40
         },
-        1300: {
+        1020: {
             slidesPerView: 3,
             spaceBetween: 50
         }
     }
 
-
-
-});
+}, );
 
 //PROJECT SWIPER
 
 const swiper3 = new Swiper('.project-swiper', {
     direction: 'horizontal',
-    loop: true,
     swipe: true,
     slidesPerView: 1,
     navigation: {
@@ -144,14 +166,14 @@ const swiper3 = new Swiper('.project-swiper', {
             slidesPerView: 2,
             spaceBetween: 40
         },
-        1300: {
+        1200: {
             slidesPerView: 3,
             spaceBetween: 50
         }
     }
 
 
-});
+}, );
 
 
 
