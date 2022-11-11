@@ -1,0 +1,186 @@
+    @media (max-width: 800px) {
+         :root {
+            --size-h2: 40px;
+        }
+        .burger {
+            display: block;
+        }
+        .nav__list {
+            display: none;
+        }
+        .container__head {
+            padding: 20px 50px;
+        }
+        .container__header {
+            background-image: url(/img/Group1\(660px\).png);
+        }
+        .header-block__btn {
+            font-size: 18px;
+        }
+        .header__block {
+            width: 50%;
+            padding: 50px 0px;
+        }
+        .container__info {
+            margin-bottom: 0px;
+        }
+        .info__title {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .info-card__title {
+            font-size: 18px;
+        }
+        .info__tel {
+            display: none;
+        }
+        .info__tel600px {
+            display: flex;
+            justify-content: space-between;
+        }
+        .info__card,
+        .info-card__text {
+            padding: 0px;
+            width: 100%;
+            text-align: left;
+        }
+        .info-card__text {
+            font-size: 14px;
+        }
+        .info__card:last-child {
+            margin-bottom: 20px;
+        }
+        .timer {
+            background-color: transparent;
+        }
+        .timer-container {
+            background-image: url(/img/Group5\(600px\).png);
+            padding: 50px 0px 50px 250px
+        }
+        .table-item {
+            font-size: 16px;
+        }
+        .table__rate {
+            font-size: 16px;
+        }
+        .table__price {
+            font-size: 18px;
+        }
+        .contact__block {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact__item {
+            padding: 20px;
+        }
+        .contact-item__order {
+            order: 2;
+        }
+        .contact-item__text {
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 660px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+        .swiper-pagination-bullet {
+            display: inline-block;
+        }
+    }
+    
+    @media (max-width: 550px) {
+        .container__footer {
+            flex-direction: column;
+            align-items: center;
+        }
+        .container__footer>div {
+            margin-bottom: 20px;
+        }
+        .info__tel600px {
+            flex-direction: column-reverse;
+        }
+        .info__phone {
+            width: 100%;
+            height: 285px;
+            background-image: url(/img/Group4\(320px\).png);
+        }
+        .info__card,
+        .info-card__text {
+            text-align: center;
+        }
+        .swiper-container {
+            padding: 0px;
+        }
+        .reviews-card {
+            padding: 100px 0px 50px 0px;
+        }
+        .table__block {
+            display: none;
+        }
+        .table__swiper-container {
+            display: block;
+            padding-bottom: 60px;
+        }
+        .table__col {
+            border-right: none;
+            border-left: none;
+        }
+    }
+    
+    @media (max-width: 460px) {
+        .header__block {
+            width: 100%;
+        }
+        .header__phone {
+            display: block;
+        }
+        .container__header {
+            background-image: none;
+        }
+        .header__link-block {
+            z-index: 10;
+            position: relative;
+        }
+        .header__link-block::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20%;
+            width: 150%;
+            height: 150%;
+            background-color: #1D2631;
+            z-index: -1;
+        }
+        .header-block__btn {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .info {
+            margin-bottom: 60px;
+        }
+        .timer {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 380px) {
+         :root {
+            --size-h2: 24px;
+        }
+        h2 {
+            line-height: 32px;
+        }
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .info {
+            margin-bottom: 60px;
+        }
+        .timer {
+            display: none;
+        }
+    }
