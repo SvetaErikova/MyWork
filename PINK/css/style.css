@@ -251,7 +251,7 @@
     
     .header__phone {
         display: none;
-        background-image: url(/img/Group1\(320px\).png);
+        background-image: url(../img/Group1\(320px\).png);
         background-repeat: no-repeat;
         background-position: center top;
         width: 100%;
@@ -309,15 +309,15 @@
     }
     
     .info-card__phone-1 {
-        background-image: url(/img/Group-2.png);
+        background-image: url(../img/Group-2.png);
     }
     
     .info-card__phone-2 {
-        background-image: url(/img/Group\ 3.png);
+        background-image: url(../img/Group\ 3.png);
     }
     
     .info-card__phone-3 {
-        background-image: url(/img/Group\ 4.png);
+        background-image: url(../img/Group\ 4.png);
     }
     
     .info-card__phone::before {
@@ -327,7 +327,7 @@
         left: 0;
         bottom: -10px;
         position: absolute;
-        background-image: url(/img/shadow.png);
+        background-image: url(../img/shadow.png);
         background-repeat: no-repeat;
         background-position: bottom center;
     }
@@ -346,7 +346,7 @@
     .info__phone {
         margin-right: 20px;
         min-width: 270px;
-        background-image: url(/img/Group4\(600px\).png);
+        background-image: url(../img/Group4\(600px\).png);
         background-position: center top;
         background-repeat: no-repeat;
     }
@@ -362,7 +362,7 @@
     
     .timer-container {
         padding: 100px 30px 100px 370px;
-        background-image: url(/img/Group\ 5.png);
+        background-image: url(../img/Group\ 5.png);
         background-repeat: no-repeat;
         background-position: center left;
         margin-bottom: 60px;
@@ -392,7 +392,7 @@
     .reviews-card {
         text-align: center;
         padding: 100px 50px;
-        background-image: url(/img/quotes.png);
+        background-image: url(../img/quotes.png);
         background-repeat: no-repeat;
         background-position: center top;
     }
@@ -491,7 +491,7 @@
         width: 100%;
         height: 100%;
         top: 0;
-        background-image: url(/img/yes.png);
+        background-image: url(../img/yes.png);
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -502,7 +502,7 @@
         width: 100%;
         height: 100%;
         top: 0;
-        background-image: url(/img/no.png);
+        background-image: url(../img/no.png);
         background-repeat: no-repeat;
         background-position: center;
     }
