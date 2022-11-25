@@ -43,6 +43,7 @@
     
     h1,
     .sale__title-hidden {
+        display: none;
         visibility: hidden;
     }
     
@@ -596,6 +597,9 @@
     }
     
     .sale__btn {
+        padding: 0px;
+        color: #333333;
+        text-align: center;
         cursor: pointer;
         font-weight: 600;
         width: 150px;
@@ -799,8 +803,8 @@
             font-size: 50px;
         }
         .sale__btn {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
         }
         .footer__btn {
             top: 80%;
