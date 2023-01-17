@@ -1,0 +1,526 @@
+                @font-face {
+                    font-family: 'roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(../fonts/roboto-regular-webfont.woff);
+                    src: url(../fonts/roboto-regular-webfont.woff2);
+                    src: url(../fonts/Roboto-Regular.ttf);
+                    font-display: swap;
+                }
+                
+                @font-face {
+                    font-family: 'roboto';
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url(../fonts/roboto-bold-webfont.woff);
+                    src: url(../fonts/roboto-bold-webfont.woff2);
+                    src: url(../fonts/Roboto-Bold.ttf);
+                    font-display: swap;
+                }
+                
+                @font-face {
+                    font-family: 'rosario';
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url(../fonts/rosario-bold-webfont.woff);
+                    src: url(../fonts/rosario-bold-webfont.woff2);
+                    src: url(../fonts/Rosario-Bold.otf);
+                    font-display: swap;
+                }
+                
+                $color-red:#E11C4B;
+                @mixin flex {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                @mixin background($position) {
+                    background-repeat: no-repeat;
+                    background-position: $position;
+                }
+                
+                @mixin line-humburger {
+                    width: 25px;
+                    height: 2px;
+                    border-radius: 25px;
+                    background-color: #8D8D8D;
+                    -webkit-transition: .5s;
+                    transition: .5s;
+                    z-index: 5;
+                    box-sizing: border-box
+                }
+                
+                @mixin absolut {
+                    content: '';
+                    position: absolute;
+                }
+                
+                @mixin hover {
+                    transition: opacity 0.3s ease;
+                }
+                
+                * {
+                    box-sizing: border-box;
+                }
+                
+                 ::-webkit-scrollbar {
+                    width: 2px;
+                    background: rgba(255, 255, 255, 0.0);
+                }
+                
+                body {
+                    font-family: 'roboto';
+                    font-weight: 400;
+                    margin: auto;
+                    color: #333333;
+                    min-width: 320px;
+                }
+                
+                ul {
+                    margin: 0;
+                    padding-left: 0px;
+                }
+                
+                li {
+                    list-style-type: none;
+                }
+                
+                a {
+                    cursor: pointer;
+                    @include hover;
+                    color: inherit;
+                    text-decoration: none;
+                }
+                
+                a:hover {
+                    opacity: 0.7;
+                }
+                
+                p {
+                    margin: 0;
+                }
+                
+                h1 {
+                    margin: 0;
+                    font-weight: 700;
+                    color: $color-red;
+                }
+                
+                h2 {
+                    margin: 0;
+                    font-size: 36px;
+                }
+                
+                .container {
+                    max-width: 1420px;
+                    min-width: 280px;
+                    width: auto;
+                    margin: auto;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                
+                .header {
+                    &-top__item {
+                        padding-left: 30px;
+                        @include background(center left);
+                    }
+                    &-top__city {
+                        background-image: url(../img/marker-city.svg);
+                    }
+                    &-top__shops {
+                        background-image: url(../img/shop.svg);
+                    }
+                    &-top__phone {
+                        background-image: url(../img/phone.svg);
+                    }
+                    &__top {
+                        border-bottom: 2px solid #E8E8E8;
+                    }
+                    &__top>.container {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px 20px;
+                    }
+                    &__menu {
+                        padding: 20px 0px;
+                        @include flex;
+                        align-items: center;
+                    }
+                    &-menu__cart {
+                        @include flex;
+                        align-items: center;
+                    }
+                    &__hamburger-line {
+                        height: 52px;
+                        display: -webkit-box;
+                        display: flex;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                    &__hamburger {
+                        display: none;
+                        position: relative;
+                        @include line-humburger();
+                    }
+                    &__hamburger::before {
+                        @include absolut();
+                        top: 7px;
+                        @include line-humburger();
+                    }
+                    &__hamburger::after {
+                        @include absolut();
+                        top: -7px;
+                        @include line-humburger();
+                    }
+                    &__open-menu {
+                        visibility: hidden;
+                        top: 170px;
+                        position: absolute;
+                        z-index: 4;
+                        min-width: 280px;
+                        border: 2px solid #DDDDDD;
+                        border-radius: 15px;
+                        background-color: #fff;
+                        -webkit-transition: .5s;
+                        transition: .5s
+                    }
+                    &__open-menu-active {
+                        visibility: inherit;
+                    }
+                    &__open-item {
+                        display: -webkit-box;
+                        display: flex;
+                        padding: 10px 20px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: #333333;
+                    }
+                    &__open-item:not(:last-child) {
+                        margin-bottom: 6px;
+                    }
+                }
+                
+                .burger {
+                    &__btn--active {
+                        background-color: var(--color-yellow);
+                    }
+                    &__btn--active::before {
+                        top: 50%;
+                        transform: rotate(45deg);
+                        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+                    }
+                    &__btn--active::after {
+                        top: 50%;
+                        transform: rotate(-45deg);
+                        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+                    }
+                    &__btn--active.burger__line {
+                        transform: scale(0);
+                        transition: transform 0.3s ease-in-out;
+                    }
+                }
+                
+                .form {
+                    & {
+                        display: flex;
+                        align-items: center;
+                        max-width: 500px;
+                        width: 100%;
+                        margin: 0px 10px;
+                        padding: 10px 20px;
+                        border: 2px solid #DDDDDD;
+                        border-radius: 100px;
+                    }
+                    &__button {
+                        margin-right: 10px;
+                        height: 25px;
+                        width: 25px;
+                        background-color: white;
+                        border: none;
+                        background-repeat: no-repeat;
+                        background-image: url(../img/search.svg);
+                    }
+                    &__input {
+                        width: 100%;
+                        border: none;
+                    }
+                }
+                
+                .cart {
+                    &__item {
+                        display: block;
+                        padding: 20px 0px 0px 0px;
+                        @include background(top center);
+                    }
+                    &__item:not(:last-child) {
+                        margin-right: 24px;
+                    }
+                    &-user {
+                        background-image: url(../img/user.svg);
+                    }
+                    &-buy {
+                        background-image: url(../img/buy.svg);
+                    }
+                    &-like {
+                        background-image: url(../img/like.svg);
+                    }
+                    &-busket {
+                        background-image: url(../img/busket.svg);
+                    }
+                    &-shop {
+                        background-image: url(../img/shop.svg);
+                        display: none;
+                    }
+                    &-marker {
+                        background-image: url(../img/marker-city.svg);
+                        display: none;
+                    }
+                }
+                
+                .nav {
+                    & {
+                        overflow: auto;
+                        white-space: nowrap;
+                        scroll-snap-type: x mandatory;
+                    }
+                    &__list {
+                        scroll-snap-align: start;
+                        padding: 10px 0px;
+                    }
+                    &__list:not(:last-child) {
+                        margin-right: 36px
+                    }
+                    & {
+                        @include flex;
+                        align-items: center;
+                    }
+                    &__active {
+                        color: $color-red;
+                    }
+                    &-sale {
+                        padding-left: 22px;
+                        @include background(left);
+                        background-image: url(../img/sale.svg);
+                    }
+                }
+                
+                .action {
+                    &__content {
+                        @include flex;
+                        flex-wrap: wrap;
+                        margin: 0px -5px;
+                        padding: 35px 0px;
+                    }
+                    &-content__card {
+                        max-width: 360px;
+                        max-height: 203px;
+                        margin: 0px 5px 35px 5px;
+                        flex: 1 1 350px;
+                        box-shadow: 0px 6px 30px 4px rgba(32, 32, 32, 0.1);
+                        border-radius: 10px;
+                    }
+                    &-content__card>a {
+                        display: block;
+                        height: 100%;
+                    }
+                    &-content__img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+                }
+                
+                .footer {
+                    & {
+                        padding: 20px 0px;
+                        background-color: #F4F4F4;
+                    }
+                    &>.container {
+                        position: relative;
+                    }
+                    &__content {
+                        @include flex;
+                        flex-wrap: wrap;
+                    }
+                    &__content>div {
+                        width: 50%;
+                    }
+                    &__soc {
+                        display: flex;
+                        justify-content: flex-end;
+                        order: 1;
+                    }
+                    &__soc>div {
+                        margin-right: 12px;
+                    }
+                    &-soc__link {
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50px;
+                        background: #FFFFFF;
+                        border: 1px solid #8D8D8D;
+                        @include background( center);
+                    }
+                    &-soc__vk {
+                        background-image: url(../img/vk.svg);
+                    }
+                    &-soc__youtube {
+                        background-image: url(../img/youtube.svg);
+                    }
+                    &-soc__telegramm {
+                        background-image: url(../img/telegramm.svg);
+                    }
+                    &__nav {
+                        @include flex;
+                        margin-bottom: 50px;
+                    }
+                    &__contacts {
+                        text-align: right;
+                    }
+                    &__contacts>div {
+                        display: inline-block;
+                        @include background(center left);
+                        padding: 5px 0px 5px 30px;
+                    }
+                    &-contacts__phone {
+                        background-image: url(../img/phone.svg);
+                        margin-right: 50px;
+                    }
+                    &-contacts__mail {
+                        background-image: url(../img/mail.svg);
+                    }
+                    &__note {
+                        font-size: 14px;
+                        color: #8D8D8D;
+                    }
+                }
+                
+                @media (max-width:1000px) {
+                    .container-bottom {
+                        margin: auto;
+                        padding: 0px 0px 0px 20px;
+                    }
+                }
+                
+                @media (max-width:800px) {
+                    .header {
+                        &__logo {
+                            width: 157px;
+                            height: 22px;
+                        }
+                    }
+                    .cart {
+                        &__item {
+                            width: 20px;
+                            height: 20px;
+                        }
+                        &__item>p {
+                            display: none;
+                        }
+                    }
+                    .form {
+                        & {
+                            max-width: 300px;
+                        }
+                    }
+                    .action {
+                        &__content {
+                            padding: 25px 0px;
+                            justify-content: space-around;
+                        }
+                    }
+                    .footer {
+                        &__content {
+                            flex-direction: column;
+                            max-width: 55%;
+                        }
+                        &__content>div {
+                            text-align: left;
+                            width: 100%;
+                        }
+                        &__content>div:not(:last-child) {
+                            margin-bottom: 25px;
+                        }
+                        &__soc {
+                            position: absolute;
+                            right: 10px;
+                        }
+                    }
+                }
+                
+                @media (max-width:550px) {
+                    h2 {
+                        font-size: 24px;
+                    }
+                    .container {
+                        & {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        &-bottom {
+                            padding: 0px 0px 0px 10px;
+                        }
+                    }
+                    .header {
+                        &__logo {
+                            width: 150px;
+                            margin-right: 35px;
+                        }
+                        &__top {
+                            display: none;
+                        }
+                        &__menu {
+                            flex-wrap: wrap;
+                        }
+                        &-menu__logo {
+                            width: 66%;
+                        }
+                        &-menu__cart {
+                            width: 34%;
+                        }
+                        &__hamburger {
+                            display: block;
+                        }
+                        &__hamburger-line {
+                            order: 1;
+                        }
+                        &-menu__form {
+                            order: 2;
+                            max-width: 261px;
+                            margin: 0px 0px 0px 10px;
+                        }
+                    }
+                    .nav {
+                        &__list:not(:last-child) {
+                            margin-right: 18px
+                        }
+                    }
+                    .cart {
+                        &__item {
+                            width: 100%;
+                        }
+                        &-user,
+                        &-busket,
+                        &-buy {
+                            display: none;
+                        }
+                        &-shop,
+                        &-marker {
+                            display: block;
+                        }
+                    }
+                    .footer {
+                        &__content {
+                            max-width: 100%;
+                        }
+                        &__soc {
+                            position: relative;
+                            justify-content: start;
+                            right: 0px;
+                            order: 0;
+                        }
+                    }
+                }
