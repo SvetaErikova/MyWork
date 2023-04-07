@@ -440,7 +440,7 @@ a {
         font-size: 14px;
     }
     .nav__menu {
-        font-size: 14px;
+        font-size: 12px;
     }
     .block__cards {
         flex-wrap: wrap;
@@ -469,7 +469,8 @@ a {
         height: 80px;
         background-size: contain;
     }
-    .header__phone {
+    .header__phone,
+    .header__phone-open {
         font-size: 10px;
         padding-right: 15px;
     }
