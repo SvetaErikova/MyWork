@@ -1,5 +1,9 @@
+body {}
+
 .list-group-item {
     transition: background-color 0.3s ease;
 }
 
-.list-group-item-success {}
+.list-group-item-success {
+    order: 2;
+}
