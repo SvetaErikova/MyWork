@@ -260,8 +260,7 @@ h2 {
 .nav {
   overflow: auto;
   white-space: nowrap;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 .nav__list {
   scroll-snap-align: start;
