@@ -355,16 +355,16 @@ a {
         bottom: 0;
     }
     &__card-1 {
-        @include card (url(../img/card1.png) bottom)
+        @include card (url(../img/card1.webp) bottom)
     }
     &__card-2 {
-        @include card (url(../img/card2.png) bottom)
+        @include card (url(../img/card2.webp) bottom)
     }
     &__card-3 {
-        @include card (url(../img/card3.png) bottom)
+        @include card (url(../img/card3.webp) bottom)
     }
     &__card-4 {
-        @include card (url(../img/card4.png) bottom)
+        @include card (url(../img/card4.webp) bottom)
     }
 }
 
